@@ -5,7 +5,8 @@ int main()
     int W = 50;
     Item items[] = {{60, 10, 6.0}, {100, 20, 5.0}, {120, 30, 4.0}};
     int n = sizeof(items)/sizeof(items[0]);
-    // sort(items, n, sizeof(items[0]), cmp);
+    
+    qsort(items, n, sizeof(items[0]), cmp);
 
     printf("%d", knapSackGreedy(W, items, n));
 
